@@ -1,5 +1,6 @@
 class ActivitiesController < ApplicationController
     before_action :set_activity, only: [:show, :edit, :update, :destroy]
+    before_action :set_categories, only: [:edit, :new]
 
     def index 
         @activities = Activity.all 
@@ -12,7 +13,7 @@ class ActivitiesController < ApplicationController
 
     def create 
         @activity = Activity.new(activity_params)
-
+byebug
         if @activity.save 
             redirect_to activities_path
         else 
@@ -47,12 +48,18 @@ class ActivitiesController < ApplicationController
         @activity = Activity.find_by(id: params[:id])
     end 
 
+    def set_categories 
+        @categories = Category.all 
+    end 
+
     def activity_params
         params.require(:activity).permit(
             :user_id,
             :name,
             :duration,
-            :notes
+            :notes,
+            # category_attributes: [:id, :name]
+            :category_id
         )
     end 
 
