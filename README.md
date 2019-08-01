@@ -1,24 +1,9 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+activitys have a name, duration, complete date, points, for rank, notes, belong to a user 
 
-Things you may want to cover:
+rank have levels, have points to hit an increase,    belongs to a user have  
 
-* Ruby version
+perks change what the perk is at intervals a user can have many perks through levels 
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
