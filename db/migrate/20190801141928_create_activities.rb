@@ -5,7 +5,6 @@ class CreateActivities < ActiveRecord::Migration[5.2]
       t.string :duration
       t.date :date_completed
       t.text :notes 
-      t.integer :points
 
       t.belongs_to :user, class_name: "user", foreign_key: "user_id"
 

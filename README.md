@@ -1,6 +1,8 @@
 # README
 
-activitys have a name, duration, complete date, points, for rank, notes, belong to a user 
+activitys have a name, duration, complete date, points, for rank, notes, belong to a user belongs to category  
+
+category, name, has points(hidden), has many activities, 
 
 rank have levels, have points to hit an increase,    belongs to a user have  
 
