@@ -1,5 +1,7 @@
 <%= form_with model: @activity do |f| %>
 
+<%= f.hidden_field :user_id, :value => current_user.id %>
+
     <%= f.label :name %>
     <%= f.text_field :name %>
 
@@ -8,6 +10,8 @@
 
     <%= f.label :notes %>
     <%= f.text_field :notes %>
+
+    <%= f.submit %>
 
 
 <% end %>
