@@ -12,8 +12,8 @@ class ActivitiesController < ApplicationController
     end 
 
     def create 
+        byebug
         @activity = Activity.new(activity_params)
-byebug
         if @activity.save 
             redirect_to activities_path
         else 
@@ -29,6 +29,7 @@ byebug
     end 
 
     def update 
+        byebug
         if @activity.update(activity_params)
             redirect_to activity_path(@activity)
         else 
@@ -58,7 +59,6 @@ byebug
             :name,
             :duration,
             :notes,
-            # category_attributes: [:id, :name]
             :category_id
         )
     end 

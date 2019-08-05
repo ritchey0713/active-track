@@ -1,3 +1,17 @@
 <h1>Activity index</h1>
 
 <%= button_to "New", new_activity_path, method: "get" %>
+
+
+<ul>
+    <% @activities.each do |activity| %>
+       <li>
+            Name: <%= activity.name %>
+       </li> 
+       <li>
+            category: <%= activity.category.name  if activity.category %>
+       </li>
+       <br/>
+
+    <% end %>
+</ul>

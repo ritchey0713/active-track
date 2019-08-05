@@ -11,7 +11,17 @@
     <%= f.label :notes %>
     <%= f.text_field :notes, :value => @activity.notes %>
 
-    <%= f.collection_select(:category_id, @categories, :id, :name) %>
+    <%= f.collection_select(:category_id, @categories, :id, :name, :include_blank => true) %>
+
+    <%#= f.fields_for :category, @activity.category.build do |ff| %>
+
+    <%# end %>
+
+
+    <% if @activity.persisted? %>
+        <%= f.label :status %>
+        <%= f.check_box :status %>
+    <% end %>
 
 
     <%= f.submit %>
