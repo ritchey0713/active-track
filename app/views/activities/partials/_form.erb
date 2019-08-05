@@ -13,9 +13,11 @@
 
     <%= f.collection_select(:category_id, @categories, :id, :name, :include_blank => true) %>
 
-    <%#= f.fields_for :category, @activity.category.build do |ff| %>
+    <%= f.fields_for :category, @activity.build_category do |ff| %>
+        <%= ff.label :name%>
+        <%= ff.text_field :name %>
 
-    <%# end %>
+    <% end %>
 
 
     <% if @activity.persisted? %>

@@ -59,7 +59,8 @@ class ActivitiesController < ApplicationController
             :name,
             :duration,
             :notes,
-            :category_id
+            :category_id,
+            :category_attributes => [:id, :name, :points]
         )
     end 
 
